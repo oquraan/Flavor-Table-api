@@ -13,7 +13,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive */
   font-weight: 400;
   font-style: normal;
   height: 100%;
@@ -35,7 +35,7 @@ footer {
   bottom: 0; */
   /* position: absolute; */
   margin-top: auto;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 400;
   font-style: normal;
 }
@@ -49,7 +49,7 @@ footer {
 .nav-links a:hover {
   color: #abe8f3;
   background: rgba(255, 255, 255, 0.1);
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 400;
   font-style: normal;
 }
@@ -57,7 +57,7 @@ footer {
   list-style: none;
   display: flex;
   gap: 15px;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 400;
   font-style: normal;
 }
@@ -65,7 +65,7 @@ header .logo {
   font-size: 24px;
   font-weight: bold;
   margin: 10px;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 400;
   font-style: normal;
 }
@@ -168,7 +168,8 @@ header {
   width: 20%;
 }
 .favoretButton,
-.deletetButton {
+.deletetButton,
+.addDetailes {
   background: #061621;
   color: white;
   border: none;
@@ -275,7 +276,7 @@ tr:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   color: #f0ead6;
   transition: transform 0.3s ease;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 400;
   font-style: normal;
 }
@@ -290,7 +291,7 @@ tr:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   color: #f0ead6;
   transition: transform 0.3s ease;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 100;
   font-size: 10px;
   font-style: normal;
@@ -324,8 +325,7 @@ tr:hover {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-#CardContaier2
-{
+#CardContaier2 {
   padding: 10px -10px 10px 10px;
   margin-right: 10px;
   display: flex;
@@ -337,7 +337,8 @@ tr:hover {
   width: 100%;
   height: 100%;
   padding-top: 10px;
-  padding-bottom: 10px;}
+  padding-bottom: 10px;
+}
 .imgcard {
   width: 100%;
   height: 200px;
@@ -347,7 +348,7 @@ tr:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive */
   font-weight: 400;
   font-style: normal;
 }
@@ -355,20 +356,30 @@ tr:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 400;
   font-style: normal;
+  font-size: 10px;
 }
 
 .cardContant,
 header,
 footer {
-  font-family: "Sevillana", cursive;
+  /* font-family: "Sevillana", cursive; */
   font-weight: 400;
   font-style: normal;
 }
 .cardContant {
-  font-size: 33px;
+  font-size: 20px;
+  /* font-family: "Noto Serif", serif; */
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  
 }
 .card1:hover {
   transform: scale(1.1);
@@ -396,3 +407,6 @@ label {
   position: ;
   bottom: 0;
 } */
+.houseOfCard {
+  justify-content: start;
+}
