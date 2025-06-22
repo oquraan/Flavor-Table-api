@@ -1,0 +1,398 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #061621;
+  flex: 1;
+  background-image: url("../images/pexels-photo-6275177.webp");
+
+  /* background-color: black;/ */
+}
+html,
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  background-color: #b9432e;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  font-size: 30px;
+  color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  /* position: relative;
+  bottom: 0; */
+  /* position: absolute; */
+  margin-top: auto;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/* body {
+  display: flex;
+  flex-direction: columns;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.nav-links a:hover {
+  color: #abe8f3;
+  background: rgba(255, 255, 255, 0.1);
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  text-decoration-line: none;
+  color: #1a1a1a;
+}
+.logo_img {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+/* .stylrInput
+{
+display: flex;
+flex-direction: row;
+justify-content: first baseline;
+
+} */
+
+#resturentForm {
+  border-radius: 50px;
+  background-image: url("../images/makloba.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 50px;
+  /* height: 100px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  /* align-items: flex-start; */
+  /* background-color: aqua; */
+  width: 80%;
+  /* padding: 20px; */
+  padding: 30px;
+}
+header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  background: #b9432e;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+}
+#formOrder {
+  /* display: inline; */
+  /* background-color: rgb(177, 127, 224); */
+  /* background-image: url("../images/mansaf.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh; */
+  /* background-position: center center; */
+  /* background-image: url("../images/pexels-photo-6275177.webp"); */
+  background-color: #061621;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.infoInput {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50%;
+}
+
+#addButton,
+#RemoveButton {
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 20px;
+  width: 27%;
+  align-items: center;
+}
+
+#searchButton {
+  background: #b9432e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 20px;
+  width: 20%;
+}
+.favoretButton,
+.deletetButton {
+  background: #061621;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 20px;
+  width: 100px;
+}
+
+#addButton:hover {
+  background: #1aac6f;
+}
+#RemoveButton:hover {
+  background: #b9432e;
+}
+.imageCard {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  align-content: space-evenly;
+}
+tr {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+
+  border-radius: 10px;
+  background-color: #ced4d8;
+  height: 100px;
+  padding: 5px;
+}
+tr:hover {
+  background-color: #b3b9be;
+}
+
+#viewOrder {
+  margin-top: 30px;
+  width: 100%;
+  background-image: url("../images/pexels-photo-6275177.webp");
+}
+/* label {
+  width: 80%;
+} */
+
+@media (max-width: 650px) {
+  #addCon {
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #ae934b;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  #CardContaier {
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #ae934b;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+
+  .card {
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 20px;
+    background-color: #b9432e;
+    border: 2px solid #5d473a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #f0ead6;
+    transition: transform 0.3s ease;
+  }
+}
+
+.card {
+  border: 1px solid black;
+  width: 60%;
+  border-radius: 20px;
+  margin: 10px 10px 10px 10px;
+  background-color: #b9432e;
+  border: 2px solid #5d473a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #f0ead6;
+  transition: transform 0.3s ease;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card1 {
+  border: 1px solid black;
+  width: 30%;
+  border-radius: 20px;
+  margin: 10px 10px 10px 10px;
+  background-color: #b9432e;
+  border: 2px solid #5d473a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #f0ead6;
+  transition: transform 0.3s ease;
+  font-family: "Sevillana", cursive;
+  font-weight: 100;
+  font-size: 10px;
+  font-style: normal;
+}
+#addCon {
+  padding: 10px -10px 10px 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  gap: 20px;
+  justify-content: center;
+  /* background-image: url("../images/pexels-photo-6275177.webp"); */
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#CardContaier {
+  padding: 10px -10px 10px 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+  justify-content: center;
+  /* background-image: url("../images/pexels-photo-6275177.webp"); */
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#CardContaier2
+{
+  padding: 10px -10px 10px 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+  justify-content: center;
+  /* background-image: url("../images/pexels-photo-6275177.webp"); */
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;}
+.imgcard {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+}
+#addCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.cardContant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardContant,
+header,
+footer {
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.cardContant {
+  font-size: 33px;
+}
+.card1:hover {
+  transform: scale(1.1);
+}
+/* .card:hover {
+  transform: scale(1.1);
+} */
+.houseOfCard {
+  justify-content: first;
+}
+.divSearch {
+}
+label {
+  color: white;
+}
+#msseage {
+  color: white;
+}
+#cardFavirot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* footer {
+  position: ;
+  bottom: 0;
+} */
