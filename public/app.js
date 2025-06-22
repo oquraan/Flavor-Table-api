@@ -20,10 +20,7 @@ async function randomRecip() {
     card.className = "card";
 
     const ingredientsHTML = data.extendedIngredients
-      .map(
-        (element, index) =>
-          `<p class='houseOfCard'>${index + 1 + "." + element.name}</p>`
-      )
+      .map((element, index) => `  ${index + 1 + "." + element.name}  `)
       .join("");
     card.innerHTML = `         <img class="imgcard" src="${
       data.image ? data.image : "images/not-found.png"
@@ -117,17 +114,17 @@ async function searchButtonFun() {
               <div class="cardContant">
               
       <p class="nameOfCard">${element.title}</p>
-               <p>missedIngredients :</p>    <p class="nameOfCard">${element.missedIngredients.join(
+                  <p class="nameOfCard">missedIngredients : ${element.missedIngredients.join(
                  ","
                )}</p>
-       <p>usedIngredients: </p>  <p class="nameOfCard">   ${element.usedIngredients.join(
+       <p class="nameOfCard">usedIngredients:     ${element.usedIngredients.join(
          ","
        )}</p>
              <div class="cardContant">       <button class="favoretButton">Favorite</button>
              <button class="deletetButton">Delete FV</button>
                           <button class="addDetailes" id=${
                             element.id
-                          }>Ad Details</button>
+                          }>Add Details</button>
 
              
  </div> 
