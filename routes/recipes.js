@@ -4,6 +4,9 @@ require("dotenv").config();
 let num = 0;
 const router = express.Router();
 let response;
+const cors = require("cors");
+
+router.use(cors());
 
 router.get("/recipes/random", async (req, res) => {
   try {

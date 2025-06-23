@@ -7,7 +7,7 @@ const randomClick = document.getElementById("randomClick");
 // randomClick.addEventListener("click", randomRecip);
 async function randomRecip() {
   try {
-    const response = await fetch(`http://localhost:3001/recipes/random`);
+    const response = await fetch(`/recipes/random`);
 
     if (!response.ok) {
       const errorData = await response.json();
@@ -83,7 +83,7 @@ async function searchButtonFun() {
       msseage.innerHTML = "<p>Enter your recipess</p>";
     }
     const response = await fetch(
-      `http://localhost:3001/recipes/search?ingredients=${ingredients}`
+      `/recipes/search?ingredients=${ingredients}`
     );
 
     if (!response.ok) {
@@ -115,8 +115,8 @@ async function searchButtonFun() {
               
       <p class="nameOfCard">${element.title}</p>
                   <p class="nameOfCard">missedIngredients : ${element.missedIngredients.join(
-                 ","
-               )}</p>
+                    ","
+                  )}</p>
        <p class="nameOfCard">usedIngredients:     ${element.usedIngredients.join(
          ","
        )}</p>
@@ -243,7 +243,7 @@ async function viewDetails(id) {
   try {
     const CardContaier2 = document.getElementById("CardContaier2");
 
-    const response = await fetch(`http://localhost:3001/recipes/${id}`);
+    const response = await fetch(`/recipes/${id}`);
     if (!response.ok) {
       const errorData = await response.json();
       console.log("Error:", errorData.error);
