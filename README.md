@@ -12,5 +12,14 @@
 ### Problem Domain  
 >Build a nodejs server to fetch real recipe data, search based on user input, and handle API communication securely.The app will use frontend JavaScript (app.js) to fetch data asynchronously from backend API routes, providing a smooth user experience.
 
+
+
+
+>What observations or questions do you have about what you've learned so far?
+>all clean .
+
+> How long did it take you to complete this assignment? And how long did you expect it to take?
+>It took me around one and half day  to complete this assignment. If I had enough knowledge and experience, it would have taken me less time.
+
 ## Web Pages  : 
  Deploy the project to GitHub Pages [Flavor-Table](https://oquraan.github.io/Flavor-Table-api/ "").
