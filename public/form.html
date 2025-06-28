@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Form</title>
+<link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🍳 Recipe Creator</h1>
+      <p>Create and share your delicious recipes</p>
+    </div>
+
+    <div class="form-container">
+      <form id="recipeForm">
+        <!-- Title Section -->
+        <div class="form-group">
+          <label for="recipeTitle">Recipe Title</label>
+          <input type="text" id="recipeTitle" class="form-control" placeholder="Enter your recipe title..." required>
+        </div>
+
+        <!-- Ingredients Section -->
+        <div class="form-group">
+          <label>Ingredients</label>
+          <div class="ingredients-section">
+            <div id="ingredientsList">
+              <div class="ingredient-item">
+                <input type="text" class="form-control" placeholder="e.g., 2 cups flour" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructions Section -->
+        <div class="form-group">
+          <label>Instructions</label>
+          <div class="instructions-section">
+            <div id="instructionsList">
+              <div class="instruction-item">
+                <textarea class="form-control" placeholder="Step 1: Describe the first step..." required></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Readyln Section -->
+        <div class="form-group">
+          <label>Readyln</label>
+          <div class="instructions-section">
+            <div id="readylnList">
+              <div class="instruction-item">
+                <input type="number" class="form-control" placeholder="Enter ready time in minutes..." required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Update  Recipe</button>
+      </form>
+
+      <!-- Recipe Preview -->
+      <div id="recipePreview" class="recipe-preview">
+        <h3>Recipe Preview</h3>
+        <div class="preview-section">
+          <h4>Title:</h4>
+          <p id="previewTitle"></p>
+        </div>
+        <div class="preview-section">
+          <h4>Ingredients:</h4>
+          <ul id="previewIngredients" class="preview-list"></ul>
+        </div>
+        <div class="preview-section">
+          <h4>Instructions:</h4>
+          <ol id="previewInstructions" class="preview-list"></ol>
+        </div>
+        <div class="preview-section">
+          <h4>Ready Time:</h4>
+          <p id="previewReadyln"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+
+</html>

@@ -32,7 +32,7 @@ router.get("/recipes/:id", async (req, res) => {
     console.log(objs);
     res.json(objs);
   } catch (error) {
-    console.error("Error fetching recipes:", error.message);
+    console.error("Error fetching recipes:", error.message + "vcd");
 
     res
       .status(500)
