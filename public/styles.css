@@ -169,6 +169,7 @@ header {
 }
 .favoretButton,
 .deletetButton,
+.updatetButton,
 .addDetailes {
   background: #061621;
   color: white;
@@ -379,7 +380,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  
 }
 .card1:hover {
   transform: scale(1.1);
@@ -409,4 +409,10 @@ label {
 } */
 .houseOfCard {
   justify-content: start;
+}
+#twobutton {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
 }
