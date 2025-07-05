@@ -16,6 +16,11 @@ Modify the previous Flavor Table app to:
 >2. Implement CRUD operations to update, delete, and retrieve all recipes.
 >3. Update the app in general to interact with the PostgreSQL database.
 
+>Extend the existing Flavor Table app with the following features:
+>- Implement user registration and login functionality using email and password.
+>- Secure specific routes so that only authenticated users can access them.
+>- Deploy the backend server (Nodejs + PostgreSQL) to Render.com.
+>- Test all endpoints using Postman.
 
 
 
@@ -24,6 +29,28 @@ Modify the previous Flavor Table app to:
 
 > How long did it take you to complete this assignment? And how long did you expect it to take?
 >It took me around half day  to complete this assignment. If I had enough knowledge and experience, it would have taken me less time.
+>
+
+## PostMan API
+
+## Registration 
+>![LRegistration ](images/regiterPostMan.jpg)
+
+## Login 
+>![Sigin ](images/loginPostMan.jpg)
+
+## PRrofile Info  
+>![PRrofile Info  ](images/profileInfoPostmanBody.jpg)
+>![PRrofile Info  ](images/profileInfoPostmanHeader.jpg)
+
+
+## Update User Profile  
+>![Update User Profile ](images/updateuserprofileBody.jpg)
+
+
+## Update User password  
+>![Update User password  ](images/updatepasswordBody.jpg)
+>![Update User password  ](images/updatepasswordHeader.jpg)
 
 ## Web Pages  : 
  Deploy the project to GitHub Pages [Flavor-Table](https://oquraan.github.io/Flavor-Table-api/ "").
