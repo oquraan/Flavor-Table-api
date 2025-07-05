@@ -526,16 +526,16 @@ async function editeDetails(
   }
 }
 
-function logout() {
-  const randomClick = document.getElementById("randomClick");
-  document
-    .getElementById("logoutButton")
-    .addEventListener("click", function () {
-      if (confirm("Are you sure you want to logout?")) {
-        localStorage.removeItem("token");
+// function logout() {
+//   const randomClick = document.getElementById("randomClick");
+//   document
+//     .getElementById("logoutButton")
+//     .addEventListener("click", function () {
+//       if (confirm("Are you sure you want to logout?")) {
+//         localStorage.removeItem("token");
 
-        window.location.href = "login.html";
-      }
-    });
-}
-logout();
+//         window.location.href = "login.html";
+//       }
+//     });
+// }
+// logout();
