@@ -14,7 +14,7 @@ function routeGuard(req, res, next) {
   console.log(token);
 
   try {
-    const decode = jwt.verify(token, process.env.APIKEY);
+    const decode = jwt.verify(token, process.env.APISECRET);
     req.user = decode;
 
     next();
