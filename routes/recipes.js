@@ -29,6 +29,8 @@ router.get("/recipes/random", routeGuard, async (req, res) => {
     // console.log(response.data.recipes[0].title);
     // console.log(num);
   } catch (error) {
+    console.error("Full error:", error);
+
     console.error("Error fetching random recipe:", error.message);
     let obj = {
       error: "somthing habpend  ",
