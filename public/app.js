@@ -1,22 +1,43 @@
 // const { response } = require("express");
+// require("./checkToken");
+// const { parse } = require("dotenv");
+// const { json } = require("express");
+
+// const { json } = require("express");
 
 // const axios = require("axios");
 const CardContaier = document.getElementById("CardContaier");
 // require("dotenv").config();
 
 const randomClick = document.getElementById("randomClick");
+document.getElementById("logoutButton").addEventListener("click", function () {
+  if (confirm("Are you sure you want to logout?")) {
+    localStorage.removeItem("token");
+
+    window.location.href = "login.html";
+  }
+});
 
 // let listfavorite = [];
 // randomClick.addEventListener("click", randomRecip);
 async function randomRecip() {
   try {
-    const response = await fetch(`/recipes/random`);
-
+    const response = await fetch(`/recipes/random`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    });
     if (!response.ok) {
       const errorData = await response.json();
-      console.log("Error:", errorData.error);
+      // console.log("Error:", errorData.error);
       document.getElementById("msseage1").innerText = errorData.error;
       return;
+    }
+
+    if (response.status === 403) {
+      localStorage.removeItem("token");
+      window.location.href = "login.html";
     }
     const data = await response.json();
     const card = document.createElement("div");
@@ -77,7 +98,7 @@ async function searchButtonFun() {
     .getElementsByClassName("infoInput")[0]
     .value.trim();
   let ingredients = ingredient.split(" ").join(",");
-  console.log(ingredients);
+  // console.log(ingredients);
   if (!ingredient) return;
   document.getElementsByClassName("infoInput")[0].value = "";
   // const params = new URLSearchParams();
@@ -92,13 +113,29 @@ async function searchButtonFun() {
     if (ingredients === "" || ingredients.trim() === "") {
       msseage.innerHTML = "<p>Enter your recipess</p>";
     }
-    const response = await fetch(`/recipes/search?ingredients=${ingredients}`);
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      msseage.innerText = errorData.error;
-      return;
+    const response = await fetch(`/recipes/search?ingredients=${ingredients}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.status === 403) {
+      localStorage.removeItem("token");
+      window.location.href = "login.html";
     }
+
+    // if (!response.ok) {
+    //   const errorData = await response.json();
+    //   msseage.innerText = errorData.error || "Something went wrong";
+
+    //   if (response.status === 403) {
+    //     localStorage.removeItem("token");
+    //     window.location.href = "login.html";
+    //   }
+
+    //   return;
+    // }
+
     const data = await response.json();
 
     if (data.length === 0) {
@@ -159,7 +196,12 @@ async function searchButtonFun() {
         window.location.href = `Details.html?id=${element.id}`;
       });
     });
-  } catch (error) {}
+  } catch (error) {
+    if (error.status === 403) {
+      localStorage.removeItem("token");
+      window.location.href = "login.html";
+    }
+  }
 }
 
 async function addFavorite(
@@ -207,15 +249,15 @@ async function addFavorite(
         return;
       }
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
 
       const alreadyExists = data.stu;
-      console.log("alreadyExists" + alreadyExists);
-      console.log(title);
-      console.log(title + "sssssssssssssss");
+      // console.log("alreadyExists" + alreadyExists);
+      // console.log(title);
+      // console.log(title + "sssssssssssssss");
 
       if (!alreadyExists) {
-        console.log(title + "sssssssssssssss");
+        // console.log(title + "sssssssssssssss");
 
         const newRecipe = {
           id: id,
@@ -225,7 +267,7 @@ async function addFavorite(
           ingredients: extendedIngredients,
           readyln: 5,
         };
-        console.log(newRecipe + "sssssssssssssss");
+        // console.log(newRecipe + "sssssssssssssss");
 
         try {
           const response = await fetch("/recipes/insert", {
@@ -235,7 +277,7 @@ async function addFavorite(
             },
             body: JSON.stringify(newRecipe),
           });
-          console.log("Response:", response.data);
+          // console.log("Response:", response.data);
         } catch (error) {
           console.error("Error posting recipe:", error);
         }
@@ -266,7 +308,7 @@ async function deleteFa(id, card, reload = false) {
     // let listfavorite = JSON.parse(localStorage.getItem("listOfFavorite")) || [];
 
     // listfavorite = listfavorite.filter((element) => element.title !== title);
-    console.log("sssaaaaaaaaaaaaaaaaaa" + id + "Ssss");
+    // console.log("sssaaaaaaaaaaaaaaaaaa" + id + "Ssss");
     try {
       const response = fetch(`api/rexipes/${id}`, { method: "DELETE" });
 
@@ -336,7 +378,7 @@ async function cardFa() {
 
     `;
 
-      console.log("pppppppp" + element.idre);
+      // console.log("pppppppp" + element.idre);
       // addFavorite(data.title, data.image, card);
       deleteFa(element.idre, card, true);
 
@@ -360,7 +402,7 @@ async function viewDetails(id) {
     const response = await fetch(`/recipes/${id}`);
     if (!response.ok) {
       const errorData = await response.json();
-      console.log("Error:", errorData.error);
+      // console.log("Error:", errorData.error);
       document.getElementById("msseage2").innerText = errorData.error;
       return;
     }
@@ -395,7 +437,7 @@ async function viewDetails(id) {
    </div>           
 
     `;
-    console.log("ffffffffffffffffffffffffffffff");
+    // console.log("ffffffffffffffffffffffffffffff");
 
     addFavorite(
       data.title,
@@ -433,7 +475,7 @@ async function editeDetails(
     const response = await fetch(`/recipes/${id}`);
     if (!response.ok) {
       const errorData = await response.json();
-      console.log("Error:", errorData.error);
+      // console.log("Error:", errorData.error);
       document.getElementById("msseage2").innerText = errorData.error;
       return;
     }
@@ -468,7 +510,7 @@ async function editeDetails(
    </div>           
 
     `;
-    console.log("ffffffffffffffffffffffffffffff");
+    // console.log("ffffffffffffffffffffffffffffff");
 
     addFavorite(
       data.title,

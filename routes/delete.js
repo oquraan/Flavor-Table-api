@@ -13,7 +13,7 @@ const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 
 router.delete("/rexipes/:id", async (req, res) => {
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
   try {
     const response = await pool.query("DELETE  FROM recipes WHERE IdRE = $1", [
       id,

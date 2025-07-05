@@ -4,8 +4,9 @@ require("dotenv").config();
 let num = 0;
 const router = express.Router();
 let response;
+const routeGuard = require("../middleware/verifyToken");
 
-router.get("/recipes/search", async (req, res) => {
+router.get("/recipes/search", routeGuard, async (req, res) => {
   try {
     const ingredient = req.query.ingredients;
 

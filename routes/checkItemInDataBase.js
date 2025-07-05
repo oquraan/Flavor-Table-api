@@ -13,7 +13,7 @@ const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 
 router.get("/check/:id", async (req, res) => {
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
   try {
     const response = await pool.query(
       "SELECT * FROM recipes WHERE IdRE = $1",
@@ -22,10 +22,10 @@ router.get("/check/:id", async (req, res) => {
     // console.log(response.rows);
     if (response.rows.length > 0) {
       res.json({ stu: true });
-      console.log("1ssssssss");
+      // console.log("1ssssssss");
     } else {
       res.json({ stu: false });
-      console.log("0ssssssss");
+      // console.log("0ssssssss");
     }
   } catch (error) {
     console.error("Error fetching  recipe:", error.message);

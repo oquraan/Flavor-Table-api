@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Sign In</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <h1>Welcome Back</h1>
+      <p>Please sign in to your account</p>
+    </div>
+
+    <div class="success-message" id="successMessage">
+      Login successful! Redirecting...
+    </div>
+
+    <form id="loginForm" method="post">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <div class="error-message" id="usernameError">Please enter a valid username</div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+      </div>
+
+      <div class="forgot-password">
+        <a href="#" onclick="handleForgotPassword()">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="login-btn" id="loginBtn">
+        Sign In
+      </button>
+    </form>
+
+    <div class="signup-link">
+      <p>Don't have an account? <a href="#" id="handleSignUp">Sign up here</a></p>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+
+</html>
