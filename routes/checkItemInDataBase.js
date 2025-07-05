@@ -16,10 +16,10 @@ router.get("/check/:id", async (req, res) => {
   // console.log(id);
   try {
     const response = await pool.query(
-      "SELECT * FROM recipes WHERE IdRE = $1",
+      "SELECT * FROM recipes  WHERE IdRE = $1",
       [id]
     );
-    // console.log(response.rows);
+     console.log(response.rows);
     if (response.rows.length > 0) {
       res.json({ stu: true });
       // console.log("1ssssssss");
