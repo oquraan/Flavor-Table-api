@@ -12,8 +12,9 @@ const cors = require("cors");
 
 router.use(cors());
 const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+const routeGuard = require("../middleware/verifyToken");
 
-router.put("/update/:id", async (req, res) => {
+router.put("/update/:id", routeGuard,async (req, res) => {
   //   const recipe = {
   //   title: "Pizza",
   //   instructions: "Mix ingredientsBake for 20 minutes",

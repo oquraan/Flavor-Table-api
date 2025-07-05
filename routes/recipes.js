@@ -5,10 +5,10 @@ let num = 0;
 const router = express.Router();
 let response;
 const cors = require("cors");
-
+const routeGuard = require("../middleware/verifyToken");
 router.use(cors());
 
-router.get("/recipes/random", async (req, res) => {
+router.get("/recipes/random", routeGuard, async (req, res) => {
   try {
     console.log(num);
 
@@ -26,8 +26,8 @@ router.get("/recipes/random", async (req, res) => {
     };
     res.json(obj);
 
-    console.log(response.data.recipes[0].title);
-    console.log(num);
+    // console.log(response.data.recipes[0].title);
+    // console.log(num);
   } catch (error) {
     console.error("Error fetching random recipe:", error.message);
     let obj = {

@@ -13,11 +13,11 @@ const cors = require("cors");
 router.use(cors());
 const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 router.get("/getAllfavorite", async (req, res) => {
-  console.log("ooooooooooooooooooo");
+  // console.log("ooooooooooooooooooo");
 
   try {
     const response = await pool.query("SELECT * FROM recipes ");
-    console.log(response.rows);
+    // console.log(response.rows);
     res.json(response.rows);
   } catch (error) {
     console.error("Error fetching  recipe:", error.message);
