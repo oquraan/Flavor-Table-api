@@ -6,17 +6,17 @@
 // const { json } = require("express");
 
 // const axios = require("axios");
-const CardContaier = document.getElementById("CardContaier");
-// require("dotenv").config();
+// const CardContaier = document.getElementById("CardContaier");
+// // require("dotenv").config();
 
-const randomClick = document.getElementById("randomClick");
-document.getElementById("logoutButton").addEventListener("click", function () {
-  if (confirm("Are you sure you want to logout?")) {
-    localStorage.removeItem("token");
+// const randomClick = document.getElementById("randomClick");
+// document.getElementById("logoutButton").addEventListener("click", function () {
+//   if (confirm("Are you sure you want to logout?")) {
+//     localStorage.removeItem("token");
 
-    window.location.href = "login.html";
-  }
-});
+//     window.location.href = "login.html";
+//   }
+// });
 
 // let listfavorite = [];
 // randomClick.addEventListener("click", randomRecip);
@@ -525,3 +525,17 @@ async function editeDetails(
     console.log(error);
   }
 }
+
+function logout() {
+  const randomClick = document.getElementById("randomClick");
+  document
+    .getElementById("logoutButton")
+    .addEventListener("click", function () {
+      if (confirm("Are you sure you want to logout?")) {
+        localStorage.removeItem("token");
+
+        window.location.href = "login.html";
+      }
+    });
+}
+logout();
