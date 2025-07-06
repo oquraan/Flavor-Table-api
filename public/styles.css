@@ -180,7 +180,7 @@ header {
   cursor: pointer;
   transition: 0.3s;
   margin: 20px;
-  width: 100px;
+  width: 20em;
 }
 
 #addButton:hover {
@@ -237,7 +237,7 @@ tr:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #ae934b;
+    /* background-color: #ae934b; */
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -249,7 +249,7 @@ tr:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #ae934b;
+    /* background-color: #ae934b; */
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -403,6 +403,7 @@ label {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 /* footer {
   position: ;
