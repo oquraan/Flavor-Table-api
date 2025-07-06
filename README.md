@@ -53,4 +53,4 @@ Modify the previous Flavor Table app to:
 >![Update User password  ](images/updatepasswordHeader.jpg)
 
 ## Web Pages  : 
- Deploy the project to GitHub Pages [Flavor-Table](https://oquraan.github.io/Flavor-Table-api/ "").
+ Deploy the project to GitHub Pages [Flavor-Table](https://flavor-table-api-98jd.onrender.com/ "").
