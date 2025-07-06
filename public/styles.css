@@ -61,12 +61,6 @@ footer {
   font-weight: 400;
   font-style: normal;
 }
-
-.con-logo {
-
-display: flex;
-flex-direction: row;
-}
 header .logo {
   font-size: 24px;
   font-weight: bold;
@@ -116,7 +110,6 @@ header {
   display: flex;
   /* justify-content: space-between; */
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   background: #b9432e;
   color: white;
@@ -436,4 +429,31 @@ label {
 
 .logout-btn:hover {
   background-color: #c82333;
+}
+
+#headerrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#ddd {
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#aaa {
+  position: relative;
+  top: 15px;
+  left: 10px;
+  gap: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.logout-container {
+  position: relative;
+  right: 20px;
+}
+#logoutButton {
+  background-color: #061621;
 }
