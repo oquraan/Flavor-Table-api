@@ -180,7 +180,7 @@ header {
   cursor: pointer;
   transition: 0.3s;
   margin: 20px;
-  width: 20em;
+  width: 20%;
 }
 
 #addButton:hover {
